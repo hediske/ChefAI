@@ -1,10 +1,6 @@
 
 def main():
-    init_pipeline()
-    import_file()
-    embedd_file()
-    prompt()
-
+    pass
 
 
 
