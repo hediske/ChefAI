@@ -18,7 +18,8 @@ def getHistoryTemplate():
 def getHistoryPrompt() -> ChatPromptTemplate:
     prompt = ChatPromptTemplate.from_messages([
         ("system", getHistoryTemplate()),
-        MessagesPlaceholder("context"),
+        MessagesPlaceholder(variable_name="history"),
         ("human", "{input}"),
-    ])
+        ]
+    )
     return prompt

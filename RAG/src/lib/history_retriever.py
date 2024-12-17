@@ -9,5 +9,5 @@ def getHistoryRetriever():
     return create_history_aware_retriever(
         llm = get_llm(),
         retriever=getRetriever(),
-        prompt= getHistoryPrompt()
+        prompt= getHistoryPrompt(),
     )

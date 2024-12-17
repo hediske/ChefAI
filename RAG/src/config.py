@@ -5,6 +5,7 @@ _ = load_dotenv(find_dotenv())
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
+HF_API_KEY = os.getenv('HF_API_KEY')
 
 CHROMADB_DIRECTORY = os.getenv('CHROMADB_DIRECTORY')
 CHROMADB_CLOUD_HOST = os.getenv('CHROMADB_CLOUD_HOST')
