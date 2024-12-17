@@ -1,26 +1,22 @@
-from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts import ChatPromptTemplate
 
 PROMPT_TEMPLATE = """
-      You are a helful chatbot for a company
-    Use the following context and question to generate an answer.
-    If no question is provided, ask if you can help the user.
-    Always answer in French.
-    The following context is helpful to answer:
-    -----
-    {context}
-    -----
-    If there is no context or the answer is not given in the context
-    say "Je suis désolé mais je ne sais pas vous répondre"
-    The question is:
-    Question: {question}
-    Helpful Answer:  
-
+    "You are an assistant for question-answering tasks. "
+    "Use the following pieces of retrieved context to answer "
+    "the question. If you don't know the answer, say that you "
+    "don't know. Use three sentences maximum and keep the "
+    "answer concise."
+    "\n\n"
+    "{context}"
 """
 
-def getTemplate():
+def getSystemTemplate():
     return PROMPT_TEMPLATE
 
 
-def getPrompt () -> PromptTemplate:
-    prompt = PromptTemplate(template = getTemplate(), input_variables = ["context", "question"])
+def getPrompt () -> ChatPromptTemplate:
+    prompt = ChatPromptTemplate.from_messages([
+        ("system" , getSystemTemplate()),
+        ("human" , "{input}"),
+    ])
     return prompt
