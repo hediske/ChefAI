@@ -1,5 +1,4 @@
-from langchain.prompts import ChatPromptTemplate
-from langchain_core.prompts.base import BasePromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 PROMPT_TEMPLATE = """
       You are a helful chatbot for a company
@@ -22,5 +21,6 @@ def getTemplate():
     return PROMPT_TEMPLATE
 
 
-def getPrompt () -> BasePromptTemplate:
-    template = BasePromptTemplate(template = getTemplate(), input_variables = ["context", "question"])
+def getPrompt () -> PromptTemplate:
+    prompt = PromptTemplate(template = getTemplate(), input_variables = ["context", "question"])
+    return prompt
