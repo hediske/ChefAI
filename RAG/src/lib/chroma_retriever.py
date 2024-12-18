@@ -1,9 +1,9 @@
 
 
 
-from src.lib.embedding_model import getEmbedding
-from src.lib.chroma_store import ChromaStore
-from src.lib.chroma_database import getChromaDB
+from lib.embedding_model import getEmbedding
+from lib.chroma_store import ChromaStore
+from lib.chroma_database import getChromaDB
 
 
 

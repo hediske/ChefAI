@@ -1,16 +1,17 @@
 
-from src.lib.evoke_RAG import evoke_and_save
-from src.lib.history_store import get_sessionStore, printStore
-from src.lib.chroma_store import ChromaStore
-from src.lib.history_conversional_chain import getHistoryConversionalChain
-from src.lib.history_retriever import getHistoryRetriever
-from src.lib.chroma_database import getChromaDB
-from src.lib.embedding_model import getEmbedding
-from src.lib.llm import get_llm
-from src.lib.chroma_retriever import getRetriever
-from src.upload.lib.import_file import import_file
-from src.upload.lib.split_document import splitDocuments
-from src.lib.chain import get_chain
+import asyncio
+from lib.evoke_RAG import evoke_and_save
+from lib.history_store import get_sessionStore, printStore
+from lib.chroma_store import ChromaStore
+from lib.history_conversional_chain import getHistoryConversionalChain
+from lib.history_retriever import getHistoryRetriever
+from lib.chroma_database import getChromaDB
+from lib.embedding_model import getEmbedding
+from lib.llm import get_llm
+from lib.chroma_retriever import getRetriever
+from upload.lib.import_embeddings  import import_file
+from upload.lib.split_document import splitDocuments
+from lib.chain import get_chain
 
 
 
@@ -52,7 +53,7 @@ from src.lib.chain import get_chain
 
 
 
-# #Testing the History Chain with the store
+# # #Testing the History Chain with the store
 # all_chain = getHistoryConversionalChain()
 # try:
 #     res = all_chain.invoke(
@@ -70,8 +71,8 @@ from src.lib.chain import get_chain
 #     print(error)
 
 
-res = evoke_and_save("test", "What is the paper about ?")
-print(res)
+# res = asyncio.run(evoke_and_save("test", "What is the paper about ?"))
+# print(res)
 
-res2 = evoke_and_save("test", "suggest other papers similar ?")
-print(res2)
+# res2 = asyncio.run(evoke_and_save("test", "suggest other papers similar ?"))
+# print(res2)

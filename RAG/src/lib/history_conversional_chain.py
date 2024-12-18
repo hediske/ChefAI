@@ -1,7 +1,7 @@
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-from src.lib.chain import get_chain
-from src.lib.history_store import get_sessionStore
+from lib.chain import get_chain
+from lib.history_store import get_sessionStore
 
 def getHistoryConversionalChain():
     conversational_rag_chain = RunnableWithMessageHistory(

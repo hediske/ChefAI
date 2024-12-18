@@ -1,5 +1,5 @@
 from langchain_openai import ChatOpenAI
-from src.config import HF_API_KEY, OPENAI_API_KEY
+from config import HF_API_KEY, OPENAI_API_KEY
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 

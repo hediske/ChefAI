@@ -1,7 +1,7 @@
 from langchain_chroma import Chroma
 from typing import List
 from langchain_core.documents import Document
-from src.lib.embedding_model import getEmbedding
+from lib.embedding_model import getEmbedding
 
 
 class ChromaStore:

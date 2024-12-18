@@ -1,11 +1,11 @@
 
-from src.lib.history_retriever import getHistoryRetriever
-from src.lib.chroma_retriever import getRetriever
-from src.lib.llm import get_llm
+from lib.history_retriever import getHistoryRetriever
+from lib.chroma_retriever import getRetriever
+from lib.llm import get_llm
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 
-from src.lib.prompt import getPrompt
+from lib.prompt import getPrompt
 
 def get_chain() :
     llm = get_llm()
