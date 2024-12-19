@@ -1,5 +1,7 @@
 
-import asyncio
+import time
+from upload.queue.utils import producer
+from upload.app import import_batch, import_file, start_uploading
 from lib.evoke_RAG import evoke_and_save
 from lib.history_store import get_sessionStore, printStore
 from lib.chroma_store import ChromaStore
@@ -9,7 +11,6 @@ from lib.chroma_database import getChromaDB
 from lib.embedding_model import getEmbedding
 from lib.llm import get_llm
 from lib.chroma_retriever import getRetriever
-from upload.lib.import_embeddings  import import_file
 from upload.lib.split_document import splitDocuments
 from lib.chain import get_chain
 
@@ -36,8 +37,6 @@ from lib.chain import get_chain
 # print("Trying the app")
 # print("Uploading a file to the local database")
 # import_file(file_path = r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Metamorphosis.pdf",file_type="pdf")
-
-
 
 
 #Testing the Chain
@@ -76,3 +75,13 @@ from lib.chain import get_chain
 
 # res2 = asyncio.run(evoke_and_save("test", "suggest other papers similar ?"))
 # print(res2)
+
+
+
+
+if __name__ == '__main__':
+
+    start_uploading(num_consumers=4)
+    time.sleep(20)
+    import_batch(r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Stories")
+    # import_file(r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Metamorphosis.pdf",file_type="pdf")

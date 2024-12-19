@@ -14,5 +14,4 @@ def get_chain() :
         # retriever= getRetriever(),
         retriever= getHistoryRetriever(),
         combine_docs_chain=combine_docs_chain )
-    print("Chain initialized")
     return retrieval_chain
