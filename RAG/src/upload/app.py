@@ -1,6 +1,3 @@
-
-
-
 from concurrent.futures import ThreadPoolExecutor
 from upload.lib.utils import get_files_from_folder
 from upload.queue.queue_manager import QueueManager

@@ -22,15 +22,15 @@ from lib.chain import get_chain
 
 
 # Testing the embeddings
-# embeddings = getEmbedding()
-# query_result = embeddings.embed_query('hi im good thanks')
-# print (query_result)
+embeddings = getEmbedding()
+query_result = embeddings.encode('hi im good thanks')
+print (query_result)
 
 
 # Testing the LLM
-# llm = get_llm()
-# res=llm.invoke('what is the capital of Tunisia ? ')
-# print(res)
+llm = get_llm()
+res=llm.invoke('what is the capital of Tunisia ? ')
+print(res)
 
 
 #Testing the import
@@ -79,9 +79,9 @@ from lib.chain import get_chain
 
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    start_uploading(num_consumers=4)
-    time.sleep(20)
-    import_batch(r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Stories")
-    # import_file(r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Metamorphosis.pdf",file_type="pdf")
+#     start_uploading(num_consumers=4)
+#     time.sleep(20)
+#     import_batch(r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Stories")
+#     # import_file(r"c:\Users\moham\Downloads\Exercies\Prepare_Hack\RAG\data\load\Metamorphosis.pdf",file_type="pdf")

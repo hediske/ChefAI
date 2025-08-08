@@ -1,7 +1,6 @@
 
 
 
-from lib.embedding_model import getEmbedding
 from lib.chroma_store import ChromaStore
 from lib.chroma_database import getChromaDB
 
