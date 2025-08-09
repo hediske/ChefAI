@@ -1,0 +1,7 @@
+chroma*/
+.env
+.venv/
+.myenv/
+data/*
+!data/test.json
+__pycache__/
