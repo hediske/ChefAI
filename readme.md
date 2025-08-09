@@ -181,4 +181,4 @@ http://localhost:8501
 
 ## 📜 License
 
-MIT License © 2025 Your Name
+MIT License © 2025 Hedi <3
